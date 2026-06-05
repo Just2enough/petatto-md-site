@@ -333,6 +333,11 @@ code, pre { font-family: var(--font-mono); }
 @media (max-width: 600px) {
   .section { padding: 60px 0; }
   .hero { padding: 48px 0 40px; }
+  /* スマホ幅では画像の幅上限を画面幅に合わせる。
+     560px のままだとグリッド列ごと膨らみ、見出し・ボタンまで画面外へはみ出して切れる */
+  .hero-media img { max-width: 100%; }
+  /* 長いダウンロードボタンを折り返し可にして横スクロールの発生を防ぐ */
+  .btn-xl { white-space: normal; }
   .cards, .shots { grid-template-columns: 1fr; }
   .shot-wide { grid-column: auto; }
   .header-actions .btn-ghost { display: none; }
