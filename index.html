@@ -30,12 +30,13 @@
         <span class="brand-name">Petatto<span class="brand-dot">.md</span></span>
       </a>
 
-      <nav class="nav" aria-label="primary">
+      <nav class="nav" id="primary-nav" aria-label="primary">
         <a href="#features" data-i18n="nav.features">特徴</a>
         <a href="#screenshots" data-i18n="nav.screenshots">画面</a>
         <a href="#how" data-i18n="nav.how">使い方</a>
         <a href="#download" data-i18n="nav.download">ダウンロード</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#news" data-i18n="nav.news">お知らせ</a>
       </nav>
 
       <div class="header-actions">
@@ -45,6 +46,12 @@
         </div>
         <a class="btn btn-ghost btn-sm" href="https://github.com/Just2enough/petatto-md-releases"
           target="_blank" rel="noopener">GitHub</a>
+        <button type="button" class="nav-toggle" aria-label="メニューを開閉" aria-controls="primary-nav"
+          aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -296,6 +303,32 @@ petatto-md: true
             <p data-i18n="faq.a6">個人・組織内のいずれの利用でも無料です。再配布・改変・リバースエンジニアリングは禁止されています（独自 EULA）。</p>
           </details>
         </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────── News / Articles ───────────────────── -->
+    <section class="news" id="news" aria-labelledby="news-title">
+      <div class="container container-narrow">
+        <h2 class="news-title" id="news-title" data-i18n="news.title">お知らせ・記事</h2>
+        <p class="news-sub" data-i18n="news.sub">作者が書いた Petatto.md 関連の記事・更新情報。</p>
+        <ul class="news-list">
+          <li class="news-item">
+            <a data-i18n-href="news.1.url" href="https://note.com/just2enough/n/n0e7c73253b99"
+              target="_blank" rel="noopener">
+              <span class="news-src" data-i18n="news.1.src">note</span>
+              <span class="news-ttl" data-i18n="news.1.title">Petatto.md を公開しました（サンプル）</span>
+              <span class="news-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="news-item">
+            <a data-i18n-href="news.2.url" href="https://zenn.dev/just2enough"
+              target="_blank" rel="noopener">
+              <span class="news-src" data-i18n="news.2.src">Zenn</span>
+              <span class="news-ttl" data-i18n="news.2.title">開発の裏側：Tauri で付箋アプリを作る（サンプル）</span>
+              <span class="news-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>

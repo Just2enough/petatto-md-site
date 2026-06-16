@@ -17,6 +17,7 @@
       "nav.how": "使い方",
       "nav.download": "ダウンロード",
       "nav.faq": "FAQ",
+      "nav.news": "お知らせ",
 
       "hero.eyebrow": "Obsidian × Windows デスクトップ",
       "hero.title": '見たいメモを、<br />デスクトップに<span class="nowrap"><span class="hl">ペタッと</span>。</span>',
@@ -100,6 +101,15 @@
       "faq.q6": "ライセンス・料金は？",
       "faq.a6": "個人・組織内のいずれの利用でも無料です。再配布・改変・リバースエンジニアリングは禁止されています（独自 EULA）。",
 
+      "news.title": "お知らせ・記事",
+      "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
+      "news.1.src": "note",
+      "news.1.title": "【無料】mdファイルを付箋としてデスクトップに貼れるアプリ作りました【Petatto.md】",
+      "news.1.url": "https://note.com/just2enough/n/n0e7c73253b99",
+      "news.2.src": "Zenn",
+      "news.2.title": "Obsidianのvaultを壊さないための設計 — Petatto.md開発メモ（哲学編）",
+      "news.2.url": "https://zenn.dev/just2enough/articles/e29956afd1e340",
+
       "footer.tag": "Obsidian の md をデスクトップに付箋として貼る",
       "footer.issues": "バグ報告",
       "footer.support": "開発を応援 ☕",
@@ -114,6 +124,7 @@
       "nav.how": "How it works",
       "nav.download": "Download",
       "nav.faq": "FAQ",
+      "nav.news": "News",
 
       "hero.eyebrow": "Obsidian × Windows desktop",
       "hero.title": 'Stick the notes<br />you care about,<br />on your desktop,<br /><span class="hl word-petatto">petatto.</span>',
@@ -197,6 +208,15 @@
       "faq.q6": "License and price?",
       "faq.a6": "Free for both personal and in-organization use. Redistribution, modification, and reverse engineering are prohibited (custom EULA).",
 
+      "news.title": "News & Articles",
+      "news.sub": "Articles and updates about Petatto.md from the author.",
+      "news.1.src": "note",
+      "news.1.title": "[Free] I made an app that lets you stick md files to your desktop as sticky notes [Petatto.md]",
+      "news.1.url": "https://note.com/just2enough/n/n0e7c73253b99?hl=en",
+      "news.2.src": "Zenn",
+      "news.2.title": "Designing Petatto.md to Protect Your Obsidian Vault: A Philosophical Approach",
+      "news.2.url": "https://zenn.dev/just2enough/articles/e29956afd1e340?locale=en",
+
       "footer.tag": "Stick Obsidian md onto your desktop as sticky notes",
       "footer.issues": "Report a bug",
       "footer.support": "Support the project ☕",
@@ -235,6 +255,13 @@
       if (val) el.setAttribute("src", val);
     });
 
+    // link href swap (外部記事の言語別 URL: note/Zenn の日本語版・英語版)
+    document.querySelectorAll("[data-i18n-href]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-href");
+      const val = dict[key];
+      if (val) el.setAttribute("href", val);
+    });
+
     document.documentElement.lang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
 
@@ -246,6 +273,33 @@
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
   });
+
+  // モバイル: ハンバーガーメニューの開閉
+  const header = document.querySelector(".site-header");
+  const navToggle = document.querySelector(".nav-toggle");
+  if (header && navToggle) {
+    const setNav = (open) => {
+      header.classList.toggle("nav-open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    navToggle.addEventListener("click", (e) => {
+      e.stopPropagation(); // document 側のクローズ処理に拾わせない
+      setNav(!header.classList.contains("nav-open"));
+    });
+    // ナビリンクをタップしたら閉じる
+    document.querySelectorAll("#primary-nav a").forEach((a) => {
+      a.addEventListener("click", () => setNav(false));
+    });
+    // メニュー外タップ / Esc で閉じる
+    document.addEventListener("click", (e) => {
+      if (!header.classList.contains("nav-open")) return;
+      if (e.target.closest(".nav")) return;
+      setNav(false);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setNav(false);
+    });
+  }
 
   applyLang(detectLang());
 })();
