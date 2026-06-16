@@ -301,5 +301,18 @@
     });
   }
 
+  // ブランドロゴ: 確実にページ最上部へ戻す
+  // （id="top" が sticky ヘッダー自身に付いており、scroll-padding-top との干渉で
+  //   モバイルだと #top アンカーが最上部まで戻らないため、JS で補正する）
+  const brand = document.querySelector(".brand");
+  if (brand) {
+    brand.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (header) header.classList.remove("nav-open");
+      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   applyLang(detectLang());
 })();
