@@ -9,3 +9,8 @@ Thumbs.db
 *-ja.png
 *-en.png
 mobile-*.png
+
+# 内部メモ（投稿ドラフト・トーン戦略等）。
+# この public リポは GitHub Pages が main ルートをそのまま配信するため、ここに置くと
+# URL 直叩き（/docs/...）で誰でも取得できてしまう。Git 管理は private リポ側で行う。
+docs/
