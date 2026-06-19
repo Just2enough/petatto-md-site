@@ -119,6 +119,7 @@
       "footer.issues": "バグ報告",
       "footer.support": "開発を応援 ☕",
       "footer.license": "個人・組織内利用は無料 / 独自 EULA",
+      "footer.analytics": "本サイトは Cookie を使わないプライバシー配慮型アクセス解析（GoatCounter）のみを利用します。アプリ本体は従来どおりテレメトリ0です。",
     },
 
     en: {
@@ -231,6 +232,7 @@
       "footer.issues": "Report a bug",
       "footer.support": "Support the project ☕",
       "footer.license": "Free for personal & in-org use / custom EULA",
+      "footer.analytics": "This site uses only privacy-friendly, cookieless analytics (GoatCounter). The app itself remains zero-telemetry as always.",
     },
   };
 
