@@ -1,0 +1,4 @@
+# SRI(integrity)で固定する資産は改行正規化を無効化する。
+# core.autocrlf 等で CRLF/LF が変わると配信バイト列がハッシュ計算時とズレ、
+# SRI 不一致でスクリプトがブロックされ計測が黙って停止するため。
+assets/count.js -text

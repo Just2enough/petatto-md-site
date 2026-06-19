@@ -19,6 +19,13 @@
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
   <link rel="alternate icon" href="assets/icon.png" />
+
+  <!-- アクセス解析: GoatCounter（Cookieレス・個人データ非収集／本サイトのみ。アプリ本体はテレメトリ0）
+       count.js は自前ホスト＋SRI で固定し第三者スクリプト読込をゼロに（ビーコン送信先のみ petatto-md.goatcounter.com）。
+       GoatCounter 更新に追従する際は assets/count.js を差し替え、integrity を再計算すること。 -->
+  <script data-goatcounter="https://petatto-md.goatcounter.com/count"
+    async src="assets/count.js"
+    integrity="sha384-2UjvVpptg4JlEVgJI2PdscrjOjPcil/4F1ZvIMJ81CShQnEDSlPI+l4PfogvTLYi"></script>
 </head>
 <body>
 
@@ -369,6 +376,7 @@ petatto-md: true
       <span>© 2026 Just2enough. All rights reserved.</span>
       <span data-i18n="footer.license">個人・組織内利用は無料 / 独自 EULA</span>
     </div>
+    <p class="container footer-analytics" data-i18n="footer.analytics">本サイトは Cookie を使わないプライバシー配慮型アクセス解析（GoatCounter）のみを利用します。アプリ本体は従来どおりテレメトリ0です。</p>
   </footer>
 
   <script src="assets/main.js"></script>
