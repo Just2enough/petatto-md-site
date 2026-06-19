@@ -129,12 +129,17 @@
           <article class="card" style="--accent:#FAC800">
             <div class="card-ic">🗂️</div>
             <h3 data-i18n="feat.tray.t">システムトレイ常駐</h3>
-            <p data-i18n="feat.tray.d">タスクバーを占有せず、トレイから一括表示・整列・最前面化。</p>
+            <p data-i18n="feat.tray.d">タスクバーを占有せず、トレイ左クリックで全付箋を最前面、右クリックから一括表示・整列。</p>
           </article>
           <article class="card" style="--accent:#2B82F6">
             <div class="card-ic">🔒</div>
             <h3 data-i18n="feat.privacy.t">プライバシー最優先</h3>
             <p data-i18n="feat.privacy.d">テレメトリ・使用状況・解析を一切送信しません。すべて端末内で完結。</p>
+          </article>
+          <article class="card" style="--accent:#22c55e">
+            <div class="card-ic">🌐</div>
+            <h3 data-i18n="feat.lang.t">日本語 / English 切替</h3>
+            <p data-i18n="feat.lang.d">設定画面でアプリの表示言語を日本語・英語から選べます。切替後、再起動で反映。</p>
           </article>
         </div>
       </div>
@@ -155,19 +160,19 @@
           </figure>
           <figure class="shot">
             <img data-i18n-src="shots.buttonImg" src="assets/screenshots/button_ja.png" alt="" loading="lazy" />
-            <figcaption data-i18n="shots.button">ヘッダの操作（フォントサイズ・色・付箋化解除）</figcaption>
+            <figcaption data-i18n="shots.button">ヘッダの操作（フォントサイズ5段階・色・付箋化解除）</figcaption>
           </figure>
           <figure class="shot">
             <img src="assets/screenshots/post_it_edit.png" alt="" loading="lazy" />
             <figcaption data-i18n="shots.edit">本文ダブルクリックで編集モード／タイトルのダブルクリックでリネーム</figcaption>
           </figure>
           <figure class="shot shot-wide">
-            <img src="assets/screenshots/main.png" alt="" loading="lazy" />
-            <figcaption data-i18n="shots.main">メインウィンドウ（vault 設定・外観・メンテナンス）</figcaption>
+            <img data-i18n-src="shots.mainImg" src="assets/screenshots/main.png" alt="" loading="lazy" />
+            <figcaption data-i18n="shots.main">メインウィンドウ（vault・外観・言語・メンテナンス）</figcaption>
           </figure>
           <figure class="shot">
-            <img src="assets/screenshots/tasktray.png" alt="" loading="lazy" />
-            <figcaption data-i18n="shots.tray">トレイメニューから一元操作</figcaption>
+            <img data-i18n-src="shots.trayImg" src="assets/screenshots/tasktray.png" alt="" loading="lazy" />
+            <figcaption data-i18n="shots.tray">トレイ左クリックで全付箋を最前面／右クリックで一元操作</figcaption>
           </figure>
         </div>
       </div>
@@ -245,6 +250,7 @@ petatto-md: true
             target="_blank" rel="noopener">
             <span data-i18n="dl.button">最新版をダウンロード（GitHub Releases）</span>
           </a>
+          <p class="dl-inapp" data-i18n="dl.inapp">既存ユーザはアプリ内の「最新版を確認」ボタンから更新できます（再ダウンロード不要）。</p>
         </div>
 
         <div class="dl-grid">
@@ -280,7 +286,7 @@ petatto-md: true
           </details>
           <details>
             <summary data-i18n="faq.qlang">アプリの表示も英語に対応していますか？</summary>
-            <p data-i18n="faq.alang">現在、アプリ本体の UI は日本語のみで、英語 UI は今後対応予定です。（本サイトは日英対応ですが、アプリ内の表示は日本語になります。）優先度の参考にするので、ご希望の方は <a href="https://github.com/Just2enough/petatto-md-releases/issues/1" target="_blank" rel="noopener">GitHub Issue「UI翻訳」</a>への 👍 で教えてください。</p>
+            <p data-i18n="faq.alang">はい。v1.2.0 以降、メインウィンドウの設定からアプリの表示言語を 日本語 / English で切り替えられます（切替後の再起動で反映されます）。本サイトも日英対応です。</p>
           </details>
           <details>
             <summary data-i18n="faq.q2">付箋の色や位置は Obsidian の md に書き込まれますか？</summary>
