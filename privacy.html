@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー / Privacy Policy — Petatto.md</title>
+  <meta name="description"
+    content="Petatto.md のプライバシーポリシー。テレメトリ・使用状況・解析を一切収集せず、すべてのデータは端末内で完結します。" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="alternate icon" href="assets/icon.png" />
+
+  <!-- このページ自体はアクセス解析を読み込みません（プライバシーページのため意図的にゼロ）。 -->
+
+  <style>
+    .legal { padding: 48px 0 84px; }
+    .legal h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--c-heading); letter-spacing: -0.02em; margin-bottom: 8px; }
+    .legal .eff { color: var(--c-text-mute); font-size: 13.5px; margin-bottom: 22px; }
+    .legal .lead { font-size: 1.05rem; color: var(--c-text-soft); margin-bottom: 8px; }
+    .legal h2 { font-size: 1.15rem; font-weight: 700; color: var(--c-heading); margin: 34px 0 10px; }
+    .legal p { margin: 10px 0; }
+    .legal ul { margin: 10px 0 10px 1.25em; }
+    .legal li { margin: 6px 0; }
+    .legal code { background: var(--c-bg-alt); padding: 1px 6px; border-radius: 6px; font-size: 0.92em; }
+    .legal a { color: var(--c-primary-700); text-decoration: underline; }
+    .legal a:hover { color: var(--c-primary); }
+    .legal .note { background: var(--c-bg-alt); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.95em; color: var(--c-text-soft); margin: 14px 0; }
+    .lang-block[hidden] { display: none; }
+    .legal hr { border: 0; border-top: 1px solid var(--c-border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ───────────────────── Header ───────────────────── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Petatto.md ホームへ">
+        <img class="brand-mark" src="assets/icon.svg" alt="" width="28" height="28" />
+        <span class="brand-name">Petatto<span class="brand-dot">.md</span></span>
+      </a>
+      <div style="flex:1"></div>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="language">
+          <button type="button" data-lang="ja" class="is-active">JA</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="index.html">&larr; <span data-lang-block="ja">ホーム</span><span data-lang-block="en" hidden>Home</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="container container-narrow">
+
+      <!-- ───────────────────── 日本語 ───────────────────── -->
+      <section class="lang-block" data-lang-block="ja">
+        <h1>プライバシーポリシー</h1>
+        <p class="eff">制定・最終更新日: 2026年6月24日</p>
+
+        <p class="lead">
+          <strong>Petatto.md（以下「本アプリ」）は、テレメトリ・使用状況・解析データを一切収集・送信・保存しません。</strong>
+          あなたのデータはすべて、あなたの端末内にとどまります。
+        </p>
+
+        <h2>1. 収集する情報</h2>
+        <p>
+          ありません。本アプリはアカウント登録・サインイン・トラッキング・広告・第三者解析 SDK のいずれも持ちません。
+          氏名・メールアドレス・位置情報・端末識別子などの個人情報を収集することはありません。
+        </p>
+
+        <h2>2. 端末内でのみ扱うデータ</h2>
+        <p>本アプリは次のデータを<strong>あなたの端末内でのみ</strong>処理します。いずれも外部へ送信されません。</p>
+        <ul>
+          <li><strong>Markdown ファイル</strong>: あなたが指定した Obsidian vault フォルダ内の <code>.md</code> ファイルを読み取り、あなたの操作（チェックボックス切替・編集・付箋化解除など）に応じて書き込みます。これらのファイルが端末外へ出ることはありません。</li>
+          <li><strong>付箋の状態</strong>: 位置・サイズ・色・表示状態は、端末内のローカル SQLite データベース（<code>%LOCALAPPDATA%\com.just2enough.petatto-md\</code> 配下）に保存します。同期・送信は行いません。</li>
+          <li><strong>アプリ設定</strong>: 表示言語・外観などの設定も端末内にのみ保存します。</li>
+        </ul>
+
+        <h2>3. ネットワーク通信</h2>
+        <ul>
+          <li><strong>GitHub 配布版（MSI）</strong>: ヘッダの「最新版を確認」ボタンを押したときにのみ、新しいバージョンが存在するかを確認するためのバージョン情報（<code>latest.json</code>）を取得します。これは通常の Web リクエストであり、個人情報や利用状況は一切含みません。起動時の自動チェックは行いません。</li>
+          <li><strong>Microsoft Store 版（MSIX）</strong>: 更新は Microsoft Store が配信します。アプリ内の更新確認ボタンは無効化されています。</li>
+          <li>上記以外に本アプリがネットワーク通信を行うことはありません。</li>
+        </ul>
+
+        <h2>4. 第三者への提供・第三者サービス</h2>
+        <p>
+          本アプリは収集する情報自体がないため、第三者へ提供する情報もありません。アプリ内に広告・トラッカー・解析 SDK を組み込んでいません。
+        </p>
+        <p class="note">
+          ※ 参考: この<strong>Web サイト</strong>（アプリ本体ではありません）は、Cookie を使わないプライバシー配慮型のアクセス解析（GoatCounter）のみを利用します。これは個人を識別せず、サイトの訪問数を把握する目的に限られます。アプリ本体は従来どおりテレメトリ 0 です。
+        </p>
+
+        <h2>5. お子様のプライバシー</h2>
+        <p>本アプリは、お子様を含むいかなる利用者からもデータを収集しません。</p>
+
+        <h2>6. 本ポリシーの変更</h2>
+        <p>本ポリシーは必要に応じて更新することがあります。最新の内容は本ページ冒頭の「最終更新日」に反映されます。</p>
+
+        <h2>7. お問い合わせ</h2>
+        <p>
+          本ポリシーや本アプリに関するご質問は、GitHub のイシューからお寄せください:
+          <a href="https://github.com/Just2enough/petatto-md-releases/issues" target="_blank" rel="noopener">github.com/Just2enough/petatto-md-releases/issues</a>
+        </p>
+        <p>提供者: Just2enough</p>
+      </section>
+
+      <!-- ───────────────────── English ───────────────────── -->
+      <section class="lang-block" data-lang-block="en" hidden>
+        <h1>Privacy Policy</h1>
+        <p class="eff">Effective / last updated: June 24, 2026</p>
+
+        <p class="lead">
+          <strong>Petatto.md (the "App") does not collect, transmit, or store any telemetry, usage data, or analytics.</strong>
+          All of your data stays on your own device.
+        </p>
+
+        <h2>1. Information we collect</h2>
+        <p>
+          None. The App has no account registration, no sign-in, no tracking, no advertising, and no third-party analytics SDKs.
+          It does not collect personal information such as your name, email address, location, or device identifiers.
+        </p>
+
+        <h2>2. Data processed only on your device</h2>
+        <p>The App processes the following data <strong>only on your device</strong>. None of it is transmitted anywhere.</p>
+        <ul>
+          <li><strong>Markdown files</strong>: The App reads <code>.md</code> files inside the Obsidian vault folder you select, and writes to them only in response to your actions (toggling checkboxes, editing, un-sticking a note, etc.). These files never leave your device.</li>
+          <li><strong>Sticky note state</strong>: Position, size, color, and visibility are stored in a local SQLite database on your device (under <code>%LOCALAPPDATA%\com.just2enough.petatto-md\</code>). It is never synced or transmitted.</li>
+          <li><strong>App settings</strong>: Settings such as display language and appearance are also stored only on your device.</li>
+        </ul>
+
+        <h2>3. Network communication</h2>
+        <ul>
+          <li><strong>GitHub (MSI) version</strong>: Only when you press the "Check for updates" button does the App fetch a version manifest (<code>latest.json</code>) to see whether a newer version exists. This is an ordinary web request and contains no personal information or usage data. There is no automatic check on launch.</li>
+          <li><strong>Microsoft Store (MSIX) version</strong>: Updates are delivered by the Microsoft Store; the in-app update-check button is disabled.</li>
+          <li>The App makes no other network connections.</li>
+        </ul>
+
+        <h2>4. Sharing &amp; third-party services</h2>
+        <p>
+          Because the App collects no information, there is nothing to share with third parties. The App embeds no ads, trackers, or analytics SDKs.
+        </p>
+        <p class="note">
+          Note: This <strong>website</strong> (not the App) uses only privacy-friendly, cookieless analytics (GoatCounter), which does not identify individuals and is used solely to count site visits. The App itself remains zero-telemetry as always.
+        </p>
+
+        <h2>5. Children's privacy</h2>
+        <p>The App collects no data from any user, including children.</p>
+
+        <h2>6. Changes to this policy</h2>
+        <p>We may update this policy as needed. The latest version is reflected in the "last updated" date at the top of this page.</p>
+
+        <h2>7. Contact</h2>
+        <p>
+          For questions about this policy or the App, please open an issue on GitHub:
+          <a href="https://github.com/Just2enough/petatto-md-releases/issues" target="_blank" rel="noopener">github.com/Just2enough/petatto-md-releases/issues</a>
+        </p>
+        <p>Provided by Just2enough.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ───────────────────── Footer ───────────────────── -->
+  <footer class="site-footer" style="border-top:1px solid var(--c-border); padding:28px 0;">
+    <div class="container footer-bottom">
+      <span>© 2026 Just2enough. All rights reserved.</span>
+      <a href="index.html" data-lang-block="ja">&larr; ホームへ戻る</a>
+      <a href="index.html" data-lang-block="en" hidden>&larr; Back to home</a>
+    </div>
+  </footer>
+
+  <script>
+    // 自己完結の JA/EN トグル（main.js には依存しない）。
+    // 言語選択はメインサイトと同じ localStorage キーで共有する。
+    (function () {
+      "use strict";
+      var KEY = "petatto-lang";
+      function detect() {
+        var saved = localStorage.getItem(KEY);
+        if (saved === "ja" || saved === "en") return saved;
+        return (navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en";
+      }
+      function apply(lang) {
+        document.querySelectorAll("[data-lang-block]").forEach(function (el) {
+          el.hidden = el.getAttribute("data-lang-block") !== lang;
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem(KEY, lang);
+        document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+          btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
+        });
+      }
+      document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-lang")); });
+      });
+      apply(detect());
+    })();
+  </script>
+</body>
+</html>
