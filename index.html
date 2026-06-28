@@ -43,6 +43,7 @@
         <a href="#how" data-i18n="nav.how">使い方</a>
         <a href="#download" data-i18n="nav.download">ダウンロード</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">これから</a>
         <a href="#news" data-i18n="nav.news">お知らせ</a>
       </nav>
 
@@ -315,6 +316,62 @@ petatto-md: true
             <summary data-i18n="faq.q6">ライセンス・料金は？</summary>
             <p data-i18n="faq.a6">個人・組織内のいずれの利用でも無料です。再配布・改変・リバースエンジニアリングは禁止されています（独自 EULA）。</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────── Roadmap / Non-goals ───────────────────── -->
+    <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container container-narrow">
+        <h2 class="roadmap-title" id="roadmap-title" data-i18n="roadmap.title">これからの予定</h2>
+        <p class="roadmap-sub" data-i18n="roadmap.sub">検討中の機能です。優先度は皆さんの要望（👍）を参考にいたします。GitHub アカウントで各項目に投票できます。または note.com の<a href="https://note.com/just2enough/n/n0e7c73253b99" target="_blank" rel="noopener">記事</a>にコメントを頂いても OK です。</p>
+        <ul class="roadmap-list">
+          <li class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-ttl" data-i18n="roadmap.aot.t">常に最前面に固定</span>
+              <span class="roadmap-desc" data-i18n="roadmap.aot.d">付箋ごとに「常に最前面」を保てるトグル。</span>
+            </div>
+            <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/4"
+              target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-ttl" data-i18n="roadmap.newmd.t">新規 md をすぐ付箋化</span>
+              <span class="roadmap-desc" data-i18n="roadmap.newmd.d">トレイの右クリックから新しい md を作って、そのまま付箋に。</span>
+            </div>
+            <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/2"
+              target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-ttl" data-i18n="roadmap.appearance.t">外観の自由度</span>
+              <span class="roadmap-desc" data-i18n="roadmap.appearance.d">フォントの選択と、本文の文字色を自由に。</span>
+            </div>
+            <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/5"
+              target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
+          </li>
+          <li class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-ttl" data-i18n="roadmap.update.t">起動時の更新チェック</span>
+              <span class="roadmap-desc" data-i18n="roadmap.update.d">オプトインで、起動時に新しいバージョンの有無だけを確認（既定はオフ）。</span>
+            </div>
+            <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/3"
+              target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
+          </li>
+        </ul>
+
+        <div class="nongoals">
+          <h3 class="nongoals-title" data-i18n="roadmap.ng.title">あえてやらないこと</h3>
+          <p class="nongoals-lead" data-i18n="roadmap.ng.lead">機能不足ではなく、Obsidian を壊さず「眺める・チェックする」に徹するための意図的な線引きです。</p>
+          <ul class="nongoals-chips">
+            <li data-i18n="roadmap.ng.1">複数 vault の同時利用</li>
+            <li data-i18n="roadmap.ng.2">PC 間の設定同期</li>
+            <li data-i18n="roadmap.ng.3">画像・コードブロック・テーブルの描画</li>
+            <li data-i18n="roadmap.ng.4">mac / Linux 版</li>
+            <li data-i18n="roadmap.ng.5">テレメトリ収集</li>
+          </ul>
+          <a class="nongoals-more" href="https://github.com/Just2enough/petatto-md-releases/blob/main/non_goals.md"
+            target="_blank" rel="noopener" data-i18n-href="roadmap.ng.more.url" data-i18n="roadmap.ng.more">詳しくは「やらないこと」一覧へ ↗</a>
         </div>
       </div>
     </section>
