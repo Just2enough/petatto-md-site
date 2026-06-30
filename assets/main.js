@@ -133,6 +133,9 @@
 
       "news.title": "お知らせ・記事",
       "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
+      "news.3.src": "note",
+      "news.3.title": "Petatto.md が Microsoft Store に登場！",
+      "news.3.url": "https://note.com/just2enough/n/nb2ec225f9cac",
       "news.1.src": "note",
       "news.1.title": "【無料】mdファイルを付箋としてデスクトップに貼れるアプリ作りました【Petatto.md】",
       "news.1.url": "https://note.com/just2enough/n/n0e7c73253b99",
@@ -272,6 +275,9 @@
 
       "news.title": "News & Articles",
       "news.sub": "Articles and updates about Petatto.md from the author.",
+      "news.3.src": "note",
+      "news.3.title": "Petatto.md is now on the Microsoft Store!",
+      "news.3.url": "https://note.com/just2enough/n/nb2ec225f9cac?hl=en",
       "news.1.src": "note",
       "news.1.title": "[Free] I made an app that lets you stick md files to your desktop as sticky notes [Petatto.md]",
       "news.1.url": "https://note.com/just2enough/n/n0e7c73253b99?hl=en",
