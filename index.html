@@ -78,12 +78,12 @@
             TODO・進行中タスク・今見ておきたいメモを、いつも目に入る場所へ。
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="https://github.com/Just2enough/petatto-md-releases/releases/latest"
+            <a class="btn btn-primary btn-lg" href="https://apps.microsoft.com/detail/9N77B4HPVRBB"
               target="_blank" rel="noopener">
-              <span data-i18n="hero.download">Windows 版をダウンロード</span>
+              <span data-i18n="hero.download">Microsoft Store で入手</span>
             </a>
-            <a class="btn btn-ghost btn-lg" href="https://github.com/Just2enough/petatto-md-releases"
-              target="_blank" rel="noopener" data-i18n="hero.github">GitHub で見る</a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/Just2enough/petatto-md-releases/releases/latest"
+              target="_blank" rel="noopener" data-i18n="hero.github">GitHub で入手</a>
           </div>
           <p class="hero-meta" data-i18n="hero.meta">Windows 10 / 11（x64）・無料・テレメトリ 0</p>
         </div>
@@ -250,15 +250,23 @@ petatto-md: true
       <div class="container">
         <header class="section-head">
           <h2 data-i18n="dl.title">ダウンロード</h2>
-          <p data-i18n="dl.sub">Windows 10 / 11（x64）向けの MSI インストーラ。無料です。</p>
+          <p data-i18n="dl.sub">Windows 10 / 11（x64）向け。Microsoft Store 版と GitHub の MSI 版を無料で提供しています。</p>
         </header>
 
         <div class="dl-cta">
-          <a class="btn btn-primary btn-xl" href="https://github.com/Just2enough/petatto-md-releases/releases/latest"
-            target="_blank" rel="noopener">
-            <span data-i18n="dl.button">最新版をダウンロード（GitHub Releases）</span>
-          </a>
-          <p class="dl-inapp" data-i18n="dl.inapp">既存ユーザはアプリ内の「最新版を確認」ボタンから更新できます（再ダウンロード不要）。</p>
+          <div class="dl-btns">
+            <a class="btn btn-primary btn-xl" href="https://apps.microsoft.com/detail/9N77B4HPVRBB"
+              target="_blank" rel="noopener">
+              <span data-i18n="dl.store">Microsoft Store で入手</span>
+            </a>
+            <a class="btn btn-ghost btn-xl" href="https://github.com/Just2enough/petatto-md-releases/releases/latest"
+              target="_blank" rel="noopener">
+              <span data-i18n="dl.button">最新版をダウンロード（GitHub Releases）</span>
+            </a>
+          </div>
+          <p class="dl-store-note" data-i18n="dl.store.note">Store 版は Microsoft が署名するため SmartScreen 警告が出ません。更新も Microsoft Store が自動配信します。</p>
+          <p class="dl-inapp" data-i18n="dl.both">Store 版と GitHub MSI 版の併用は非推奨です。どちらか一方をご利用ください。</p>
+          <p class="dl-inapp" data-i18n="dl.inapp">既存 GitHub ユーザはアプリ内の「最新版を確認」ボタンから今後も更新できます（再ダウンロード不要）。</p>
         </div>
 
         <div class="dl-grid">
@@ -271,9 +279,9 @@ petatto-md: true
             </ul>
           </div>
           <div class="dl-box dl-note">
-            <h3 data-i18n="dl.warn.t">⚠️ SmartScreen 警告について</h3>
-            <p data-i18n="dl.warn.d">コード署名をしていないため、初回起動時に「Windows によって PC が保護されました」が表示されます。
-              「<strong>詳細情報</strong>」→「<strong>実行</strong>」で続行できます（自己責任の前提）。</p>
+            <h3 data-i18n="dl.warn.t">⚠️ SmartScreen 警告について（GitHub MSI 版）</h3>
+            <p data-i18n="dl.warn.d">GitHub release 版（MSI）ではコード署名をしていないため、初回起動時に「Windows によって PC が保護されました」が表示されます。
+              「<strong>詳細情報</strong>」→「<strong>実行</strong>」で続行できます（自己責任の前提）。Microsoft Store 版ではこの警告は出ません。</p>
             <img src="assets/screenshots/windows_warning.png" alt="SmartScreen 警告画面" loading="lazy" />
           </div>
         </div>

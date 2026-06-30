@@ -272,7 +272,9 @@ code, pre { font-family: var(--font-mono); }
     var(--c-bg);
 }
 .dl-cta { text-align: center; margin-bottom: 44px; }
-.dl-inapp { margin-top: 16px; font-size: 13.5px; color: var(--c-text-mute); font-weight: 600; }
+.dl-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.dl-store-note { margin-top: 16px; font-size: 13.5px; color: var(--c-text-mute); font-weight: 600; }
+.dl-inapp { margin-top: 8px; font-size: 13.5px; color: var(--c-text-mute); font-weight: 600; }
 .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 900px; margin: 0 auto; }
 .dl-box {
   background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius);
