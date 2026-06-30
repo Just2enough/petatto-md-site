@@ -24,8 +24,8 @@
       "hero.title": '見たいメモを、<br />デスクトップに<span class="nowrap"><span class="hl">ペタッと</span>。</span>',
       "hero.sub":
         "Obsidian vault の Markdown（.mdファイル）を、Windows デスクトップに<strong>付箋</strong>として貼り付け。TODO・進行中タスク・今見ておきたいメモを、いつも目に入る場所へ。",
-      "hero.download": "Windows 版をダウンロード",
-      "hero.github": "GitHub で見る",
+      "hero.download": "Microsoft Store で入手",
+      "hero.github": "GitHub で入手",
       "hero.meta": "Windows 10 / 11（x64）・無料・テレメトリ 0",
 
       "trust.privacy": "テレメトリ・解析 0",
@@ -80,16 +80,19 @@
       "md.plain": "プレーンテキスト",
 
       "dl.title": "ダウンロード",
-      "dl.sub": "Windows 10 / 11（x64）向けの MSI インストーラ。無料です。",
+      "dl.sub": "Windows 10 / 11（x64）向け。Microsoft Store 版と GitHub の MSI 版を無料で提供しています。",
+      "dl.store": "Microsoft Store で入手",
       "dl.button": "最新版をダウンロード（GitHub Releases）",
-      "dl.inapp": "既存ユーザはアプリ内の「最新版を確認」ボタンから更新できます（再ダウンロード不要）。",
+      "dl.store.note": "Store 版は Microsoft が署名するため SmartScreen 警告が出ません。更新も Microsoft Store が自動配信します。",
+      "dl.both": "Store 版と GitHub MSI 版の併用は非推奨です。どちらか一方をご利用ください。",
+      "dl.inapp": "既存 GitHub ユーザはアプリ内の「最新版を確認」ボタンから今後も更新できます（再ダウンロード不要）。",
       "dl.req.t": "動作環境",
       "dl.req.os": "Windows 10 / 11（x64）",
       "dl.req.webview": "Microsoft Edge WebView2 ランタイム（未導入時はインストーラが自動取得）",
       "dl.req.obsidian": "Obsidian（付箋化対象の md 作成に推奨）",
-      "dl.warn.t": "⚠️ SmartScreen 警告について",
+      "dl.warn.t": "⚠️ SmartScreen 警告について（GitHub MSI 版）",
       "dl.warn.d":
-        'コード署名をしていないため、初回起動時に「Windows によって PC が保護されました」が表示されます。「<strong>詳細情報</strong>」→「<strong>実行</strong>」で続行できます（自己責任の前提）。',
+        'GitHub release 版（MSI）ではコード署名をしていないため、初回起動時に「Windows によって PC が保護されました」が表示されます。「<strong>詳細情報</strong>」→「<strong>実行</strong>」で続行できます（自己責任の前提）。Microsoft Store 版ではこの警告は出ません。',
 
       "faq.title": "よくある質問",
       "faq.q1": "Obsidian は必須ですか？",
@@ -160,8 +163,8 @@
       "hero.title": 'Stick the notes<br />you care about,<br />on your desktop,<br /><span class="hl word-petatto">petatto.</span>',
       "hero.sub":
         'Pin Markdown (.md files) from your Obsidian vault onto your Windows desktop as <strong>sticky notes</strong>. Keep TODOs, work-in-progress, and must-see notes always in view.',
-      "hero.download": "Download for Windows",
-      "hero.github": "View on GitHub",
+      "hero.download": "Get it from the Microsoft Store",
+      "hero.github": "Get from GitHub",
       "hero.meta": "Windows 10 / 11 (x64) · Free · Zero telemetry",
 
       "trust.privacy": "Zero telemetry",
@@ -216,16 +219,19 @@
       "md.plain": "Plain text",
 
       "dl.title": "Download",
-      "dl.sub": "MSI installer for Windows 10 / 11 (x64). Free.",
+      "dl.sub": "For Windows 10 / 11 (x64). Available free from the Microsoft Store and as a GitHub MSI.",
+      "dl.store": "Get it from the Microsoft Store",
       "dl.button": "Download latest (GitHub Releases)",
-      "dl.inapp": "Existing users can update in-app via the “Check for updates” button — no re-download needed.",
+      "dl.store.note": "The Store edition is signed by Microsoft, so no SmartScreen warning appears. Updates are delivered automatically by the Microsoft Store.",
+      "dl.both": "Installing both the Store and GitHub MSI editions is not recommended — please use only one.",
+      "dl.inapp": "Existing GitHub users can keep updating in-app via the “Check for updates” button — no re-download needed.",
       "dl.req.t": "Requirements",
       "dl.req.os": "Windows 10 / 11 (x64)",
       "dl.req.webview": "Microsoft Edge WebView2 runtime (installer fetches it if missing)",
       "dl.req.obsidian": "Obsidian (recommended for authoring the md to stick)",
-      "dl.warn.t": "⚠️ About the SmartScreen warning",
+      "dl.warn.t": "⚠️ About the SmartScreen warning (GitHub MSI edition)",
       "dl.warn.d":
-        'Because the app is not code-signed, the first launch shows "Windows protected your PC". Click "<strong>More info</strong>" → "<strong>Run anyway</strong>" to continue (at your own risk).',
+        'Because the GitHub release (MSI) is not code-signed, the first launch shows "Windows protected your PC". Click "<strong>More info</strong>" → "<strong>Run anyway</strong>" to continue (at your own risk). The Microsoft Store edition does not show this warning.',
 
       "faq.title": "Frequently asked questions",
       "faq.q1": "Is Obsidian required?",
