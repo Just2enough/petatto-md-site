@@ -176,7 +176,7 @@
           </figure>
           <figure class="shot shot-wide">
             <img data-i18n-src="shots.mainImg" src="assets/screenshots/main.png" alt="" loading="lazy" />
-            <figcaption data-i18n="shots.main">メインウィンドウ（vault・外観・言語・メンテナンス）</figcaption>
+            <figcaption data-i18n="shots.main">メインウィンドウ（vault・付箋・外観・言語・メンテナンス）</figcaption>
           </figure>
           <figure class="shot">
             <img data-i18n-src="shots.trayImg" src="assets/screenshots/tasktray.png" alt="" loading="lazy" />
@@ -314,7 +314,7 @@ petatto-md: true
           </details>
           <details>
             <summary data-i18n="faq.q4">付箋を消すとファイルも消えますか？</summary>
-            <p data-i18n="faq.a4">消えません。付箋ヘッダの「×」は frontmatter の <code>petatto-md: true</code> を削除するだけで、md ファイル自体は残ります。</p>
+            <p data-i18n="faq.a4">消えません。付箋ヘッダの「×」は<strong>付箋化を解除するだけ</strong>で、md ファイル自体は残ります。解除したときに frontmatter の <code>petatto-md</code> を<strong>削除する</strong>か、<code>petatto-md: false</code> として<strong>書き残す</strong>かは設定で選べます（既定は削除）。書き残しておけば、Obsidian 側で <code>petatto-md: false</code> を検索して「前に付箋にしていたノート」を辿れます。</p>
           </details>
           <details>
             <summary data-i18n="faq.q5">Mac / Linux 版はありますか？</summary>
