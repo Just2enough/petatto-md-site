@@ -137,6 +137,9 @@
 
       "news.title": "お知らせ・記事",
       "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
+      "news.4.src": "note",
+      "news.4.title": "ユーザーさまの声で進化！Petatto.md v1.4.0 ： 「このフォルダは付箋にしたくない」「付箋の履歴を残したい」に対応",
+      "news.4.url": "https://note.com/just2enough/n/nd056fd600893",
       "news.3.src": "note",
       "news.3.title": "Petatto.md が Microsoft Store に登場！",
       "news.3.url": "https://note.com/just2enough/n/nb2ec225f9cac",
@@ -283,6 +286,9 @@
 
       "news.title": "News & Articles",
       "news.sub": "Articles and updates about Petatto.md from the author.",
+      "news.4.src": "note",
+      "news.4.title": "Shaped by your feedback! Petatto.md v1.4.0 — answering “don’t pin this folder” and “keep a history of past sticky notes”",
+      "news.4.url": "https://note.com/just2enough/n/nd056fd600893?hl=en",
       "news.3.src": "note",
       "news.3.title": "Petatto.md is now on the Microsoft Store!",
       "news.3.url": "https://note.com/just2enough/n/nb2ec225f9cac?hl=en",
