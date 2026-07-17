@@ -149,6 +149,11 @@
             <h3 data-i18n="feat.lang.t">日本語 / English 切替</h3>
             <p data-i18n="feat.lang.d">設定画面でアプリの表示言語を日本語・英語から選べます。切替後、再起動で反映。</p>
           </article>
+          <article class="card" style="--accent:#94A3B8">
+            <div class="card-ic">🚫</div>
+            <h3 data-i18n="feat.ignore.t">フォルダ単位で監視除外</h3>
+            <p data-i18n="feat.ignore.d"><code>.petatto-ignore</code> を置いたフォルダは配下ごと対象外。テンプレート等を付箋にせず、vault の一部だけを外せます。</p>
+          </article>
         </div>
       </div>
     </section>
@@ -315,6 +320,10 @@ petatto-md: true
           <details>
             <summary data-i18n="faq.q4">付箋を消すとファイルも消えますか？</summary>
             <p data-i18n="faq.a4">消えません。付箋ヘッダの「×」は<strong>付箋化を解除するだけ</strong>で、md ファイル自体は残ります。解除したときに frontmatter の <code>petatto-md</code> を<strong>削除する</strong>か、<code>petatto-md: false</code> として<strong>書き残す</strong>かは設定で選べます（既定は削除）。書き残しておけば、Obsidian 側で <code>petatto-md: false</code> を検索して「前に付箋にしていたノート」を辿れます。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.qignore">特定のフォルダを付箋の対象から外せますか？</summary>
+            <p data-i18n="faq.aignore">はい。外したいフォルダに空ファイル <code>.petatto-ignore</code> を置くと、そのフォルダ配下（サブフォルダも含め何段でも）の md は <code>petatto-md: true</code> が付いていても付箋になりません。Templates フォルダなどを除外するのに使えます。ドット始まりのファイルは Obsidian からは作成できないため、エクスプローラなど OS 側で作成してください。</p>
           </details>
           <details>
             <summary data-i18n="faq.q5">Mac / Linux 版はありますか？</summary>
