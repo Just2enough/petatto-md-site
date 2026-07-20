@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips・こまったとき / Tips &amp; Troubleshooting — Petatto.md</title>
+  <meta name="description"
+    content="Petatto.md の詳しい使い方とトラブル時の対処。クラウド同期の vault での「再走査」、.petatto-ignore による除外の細かい挙動。" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="alternate icon" href="assets/icon.png" />
+
+  <!-- アクセス解析: index.html と同じ自前ホスト＋SRI の GoatCounter（Cookieレス）。
+       count.js を差し替える際は index.html 側と同じ integrity を再計算して両方に反映すること。 -->
+  <script data-goatcounter="https://petatto-md.goatcounter.com/count"
+    async src="assets/count.js"
+    integrity="sha384-2UjvVpptg4JlEVgJI2PdscrjOjPcil/4F1ZvIMJ81CShQnEDSlPI+l4PfogvTLYi"></script>
+
+  <style>
+    /* privacy.html と同じ体裁。長文ページ用のローカルスタイル。 */
+    .legal { padding: 48px 0 84px; }
+    .legal h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--c-heading); letter-spacing: -0.02em; margin-bottom: 8px; }
+    .legal .eff { color: var(--c-text-mute); font-size: 13.5px; margin-bottom: 22px; }
+    .legal .lead { font-size: 1.05rem; color: var(--c-text-soft); margin-bottom: 8px; }
+    .legal h2 { font-size: 1.15rem; font-weight: 700; color: var(--c-heading); margin: 34px 0 10px; }
+    .legal h3 { font-size: 1rem; font-weight: 700; color: var(--c-heading); margin: 22px 0 8px; }
+    .legal p { margin: 10px 0; }
+    .legal ul, .legal ol { margin: 10px 0 10px 1.25em; }
+    .legal li { margin: 6px 0; }
+    .legal code { background: var(--c-bg-alt); padding: 1px 6px; border-radius: 6px; font-size: 0.92em; color: var(--c-primary-700); }
+    .legal a { color: var(--c-primary-700); text-decoration: underline; }
+    .legal a:hover { color: var(--c-primary); }
+    .legal .note { background: var(--c-bg-alt); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.95em; color: var(--c-text-soft); margin: 14px 0; }
+    .legal .fix { border-left: 3px solid var(--c-primary); }
+    .lang-block[hidden] { display: none; }
+    .legal hr { border: 0; border-top: 1px solid var(--c-border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ───────────────────── Header ───────────────────── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Petatto.md ホームへ">
+        <img class="brand-mark" src="assets/icon.svg" alt="" width="28" height="28" />
+        <span class="brand-name">Petatto<span class="brand-dot">.md</span></span>
+      </a>
+      <div style="flex:1"></div>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="language">
+          <button type="button" data-lang="ja" class="is-active">JA</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="index.html">&larr; <span data-lang-block="ja">ホーム</span><span data-lang-block="en" hidden>Home</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="container container-narrow">
+
+      <!-- ───────────────────── 日本語 ───────────────────── -->
+      <section class="lang-block" data-lang-block="ja">
+        <h1>Tips・こまったとき</h1>
+        <p class="eff">最終更新日: 2026年7月20日</p>
+
+        <p class="lead">
+          トップページの<a href="index.html#faq">よくある質問</a>より一歩踏み込んだ内容をまとめています。
+        </p>
+
+        <h2>クラウド同期のフォルダに vault を置いている方へ</h2>
+        <p>
+          Google ドライブ・OneDrive・Dropbox などの同期フォルダに Obsidian vault を置いて使うこともできます。
+          このとき、同期の一時的な切断や再接続をはさむと、<strong>Obsidian 側で編集しても付箋に反映されなくなる</strong>ことがあります。
+          Petatto.md は vault フォルダの変更を見張って付箋を更新していますが、フォルダが一度 OS から切り離されると、
+          再接続後もその見張りが外れたままになることがあるためです。
+        </p>
+
+        <h3>直し方</h3>
+        <p class="note fix">
+          メインウィンドウの vault カードにある <strong>「再走査」</strong> ボタンを押してください。
+          見張りを貼り直し、その時点の最新の内容で付箋を開き直します。
+          <strong>付箋の位置・サイズ・色はそのまま残ります</strong>（付箋化の解除やファイルの書き換えは行いません）。
+        </p>
+        <ul>
+          <li>「再走査」でも直らないときは、アプリを一度終了して起動し直してください。</li>
+          <li>クラウド側がまだオフライン・未同期で vault フォルダに届かない状態だと、「再走査」はエラーになります。同期が復帰してからもう一度押してください。</li>
+          <li>「最近この付箋、更新されていないかも？」と感じたときの最初の一手として覚えておくと安心です。</li>
+        </ul>
+
+        <hr />
+
+        <h2>特定のフォルダを付箋の対象から外す（<code>.petatto-ignore</code>）</h2>
+        <p>
+          付箋にしたくないフォルダ（テンプレート置き場、下書き、アーカイブなど）には、
+          <code>.petatto-ignore</code> という名前の<strong>空ファイル</strong>を 1 つ置きます。
+          そのフォルダの中にあるノートは、<code>petatto-md: true</code> が書かれていても付箋になりません。
+        </p>
+
+        <h3>ファイルの作り方</h3>
+        <p>
+          ドットで始まる名前のファイルは Obsidian からは作成・表示できないため、エクスプローラなど Windows 側で作成してください。
+        </p>
+        <ul>
+          <li>まずエクスプローラの「表示」で<strong>ファイル名拡張子を表示</strong>にしておきます（そうしないと <code>.petatto-ignore.txt</code> という別名になってしまい、効きません）。</li>
+          <li>対象のフォルダで右クリック →「新規作成」→「テキスト ドキュメント」を作り、名前を <code>.petatto-ignore</code> に変更します。</li>
+          <li>名前の変更がうまくいかない場合は、末尾にもう一つドットを付けて <code>.petatto-ignore.</code> と入力してください（末尾のドットは自動的に取り除かれます）。</li>
+          <li>中身は空のままで構いません。書かれている内容は読み取りません。</li>
+        </ul>
+
+        <h3>効きかたの細かいところ</h3>
+        <ul>
+          <li><strong>下の階層まで丸ごと外れます。</strong> 置いたフォルダだけでなく、その中のサブフォルダ、さらにその中……と、何段でも対象外になります。</li>
+          <li><strong>vault のいちばん上に置くと、vault 全体が対象外になります。</strong> 付箋が 1 つも出てこなくなったときは、まずここを確認してください。</li>
+          <li><strong>一部だけを対象に戻すことはできません。</strong> 外したフォルダの中に何を置いても、その中のノートを個別に呼び戻す方法はありません。戻したいときは、<code>.petatto-ignore</code> を削除して、本当に外したい下のフォルダに置き直してください。</li>
+          <li><strong>置く順番が大事です。</strong> 先に <code>.petatto-ignore</code> を置いてから、そのフォルダのノートに <code>petatto-md: true</code> を書いてください。逆の順番だと、書いた瞬間にいったん付箋になります（付箋ヘッダの「×」で解除すれば元に戻せます）。</li>
+          <li><strong>すでに出ている付箋はすぐには閉じません。</strong> 後から <code>.petatto-ignore</code> を置いた場合、その時点で開いている付箋はそのまま残り、<strong>次にアプリを起動したときに</strong>出てこなくなります。すぐ消したいときは付箋の「×」で解除してください。</li>
+          <li><strong>外したフォルダのファイルは「新規付箋化」からも選べません。</strong> トレイの「新規付箋化…」で選ぶと、対象外である旨のエラーになります。</li>
+          <li><strong>外したフォルダの中は見ていません。</strong> 対象外にしたフォルダの中でノートを削除・移動しても、Petatto.md は何も通知しません（意図的な除外として扱います）。</li>
+        </ul>
+
+        <hr />
+
+        <h2>それでも解決しないとき</h2>
+        <p>
+          GitHub のイシューからお知らせください。お使いの Windows のバージョン、Petatto.md のバージョン、
+          vault の置き場所（クラウド同期かどうか）を添えていただけると助かります。
+        </p>
+        <p>
+          <a href="https://github.com/Just2enough/petatto-md-releases/issues" target="_blank" rel="noopener">github.com/Just2enough/petatto-md-releases/issues</a>
+        </p>
+      </section>
+
+      <!-- ───────────────────── English ───────────────────── -->
+      <section class="lang-block" data-lang-block="en" hidden>
+        <h1>Tips &amp; Troubleshooting</h1>
+        <p class="eff">Last updated: July 20, 2026</p>
+
+        <p class="lead">
+          A deeper dive than the <a href="index.html#faq">FAQ</a> on the home page.
+        </p>
+
+        <h2>If your vault lives in a cloud-synced folder</h2>
+        <p>
+          You can keep your Obsidian vault in a synced folder such as Google Drive, OneDrive, or Dropbox.
+          When you do, a brief disconnection and reconnection of the sync client can leave
+          <strong>edits you make in Obsidian no longer showing up on your sticky notes</strong>.
+          Petatto.md watches your vault folder for changes and updates the notes accordingly, but once the folder is
+          detached from the OS, that watch can stay detached even after the folder comes back.
+        </p>
+
+        <h3>How to fix it</h3>
+        <p class="note fix">
+          Press the <strong>"Rescan"</strong> button on the vault card in the main window.
+          It re-attaches the watch and reopens your sticky notes with the current contents of the files.
+          <strong>Position, size, and color of each note are preserved</strong> (nothing is un-stuck and no file is rewritten).
+        </p>
+        <ul>
+          <li>If "Rescan" does not help, quit the app and start it again.</li>
+          <li>If the cloud folder is still offline and the vault path cannot be reached, "Rescan" will report an error. Wait until syncing has resumed and press it again.</li>
+          <li>Keep it in mind as the first thing to try whenever a note feels out of date.</li>
+        </ul>
+
+        <hr />
+
+        <h2>Excluding a folder from sticky notes (<code>.petatto-ignore</code>)</h2>
+        <p>
+          To keep a folder out of Petatto.md (templates, drafts, archives, and so on), place a single
+          <strong>empty file</strong> named <code>.petatto-ignore</code> inside it.
+          Notes in that folder will not become sticky notes even if they contain <code>petatto-md: true</code>.
+        </p>
+
+        <h3>Creating the file</h3>
+        <p>
+          Obsidian cannot create or show files whose names begin with a dot, so create it from File Explorer in Windows.
+        </p>
+        <ul>
+          <li>First turn on <strong>File name extensions</strong> in Explorer's View menu — otherwise you will end up with <code>.petatto-ignore.txt</code>, which has no effect.</li>
+          <li>Right-click inside the folder, choose New → Text Document, and rename it to <code>.petatto-ignore</code>.</li>
+          <li>If renaming is rejected, type <code>.petatto-ignore.</code> with an extra dot at the end (Windows removes the trailing dot for you).</li>
+          <li>Leave the file empty. Its contents are never read.</li>
+        </ul>
+
+        <h3>Details worth knowing</h3>
+        <ul>
+          <li><strong>Everything below is excluded too.</strong> Not just the folder you put it in, but its subfolders, their subfolders, and so on, however deep.</li>
+          <li><strong>Placed at the top of your vault, it excludes the whole vault.</strong> If no sticky notes appear at all, check this first.</li>
+          <li><strong>You cannot bring part of it back.</strong> Nothing you place inside an excluded folder will re-include the notes within it. To bring them back, delete the <code>.petatto-ignore</code> file and place it in the deeper folder you actually meant to exclude.</li>
+          <li><strong>Order matters.</strong> Place <code>.petatto-ignore</code> first, then add <code>petatto-md: true</code> to notes in that folder. In the other order, a note becomes a sticky note the moment you write the flag (press "×" on the note to un-stick it).</li>
+          <li><strong>Sticky notes already on screen do not close right away.</strong> If you add <code>.petatto-ignore</code> later, notes that are currently open stay open and simply <strong>do not come back the next time you start the app</strong>. To remove one immediately, press "×" on the note.</li>
+          <li><strong>Excluded files cannot be picked in "New sticky note".</strong> Choosing one from the tray menu returns an error saying the folder is excluded.</li>
+          <li><strong>Petatto.md stops looking inside.</strong> Deleting or moving notes within an excluded folder produces no notifications — the exclusion is treated as intentional.</li>
+        </ul>
+
+        <hr />
+
+        <h2>Still stuck?</h2>
+        <p>
+          Let us know on GitHub. It helps to include your Windows version, your Petatto.md version, and where your vault
+          is stored (cloud-synced or not).
+        </p>
+        <p>
+          <a href="https://github.com/Just2enough/petatto-md-releases/issues" target="_blank" rel="noopener">github.com/Just2enough/petatto-md-releases/issues</a>
+        </p>
+      </section>
+
+      <!-- 将来ここへ移設予定（決定 No.239）: ログの採取手順 / SmartScreen 警告 / WebView2 について -->
+
+    </div>
+  </main>
+
+  <!-- ───────────────────── Footer ───────────────────── -->
+  <footer class="site-footer" style="border-top:1px solid var(--c-border); padding:28px 0;">
+    <div class="container footer-bottom">
+      <span>© 2026 Just2enough. All rights reserved.</span>
+      <a href="index.html" data-lang-block="ja">&larr; ホームへ戻る</a>
+      <a href="index.html" data-lang-block="en" hidden>&larr; Back to home</a>
+    </div>
+  </footer>
+
+  <script>
+    // 自己完結の JA/EN トグル（main.js には依存しない）。privacy.html と同一実装。
+    // 言語選択はメインサイトと同じ localStorage キーで共有する。
+    (function () {
+      "use strict";
+      var KEY = "petatto-lang";
+      function detect() {
+        var saved = localStorage.getItem(KEY);
+        if (saved === "ja" || saved === "en") return saved;
+        return (navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en";
+      }
+      function apply(lang) {
+        document.querySelectorAll("[data-lang-block]").forEach(function (el) {
+          el.hidden = el.getAttribute("data-lang-block") !== lang;
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem(KEY, lang);
+        document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+          btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
+        });
+      }
+      document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-lang")); });
+      });
+      apply(detect());
+    })();
+  </script>
+</body>
+</html>

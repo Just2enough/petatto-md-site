@@ -113,6 +113,7 @@
       "faq.a5": "現在は Windows 10 / 11（x64）のみ対応しています。",
       "faq.q6": "ライセンス・料金は？",
       "faq.a6": "個人・組織内のいずれの利用でも無料です。再配布・改変・リバースエンジニアリングは禁止されています（独自 EULA）。",
+      "faq.more": "もっと詳しく: Tips・こまったとき ↗",
 
       "roadmap.title": "これからの予定",
       "roadmap.sub": '検討中の機能です。優先度は皆さんの要望（👍）を参考にいたします。GitHub アカウントで各項目に投票できます。または note.com の<a href="https://note.com/just2enough/n/n0e7c73253b99" target="_blank" rel="noopener">記事</a>にコメントを頂いても OK です。',
@@ -262,6 +263,7 @@
       "faq.a5": "Currently Windows 10 / 11 (x64) only.",
       "faq.q6": "License and price?",
       "faq.a6": "Free for both personal and in-organization use. Redistribution, modification, and reverse engineering are prohibited (custom EULA).",
+      "faq.more": "More: Tips &amp; Troubleshooting ↗",
 
       "roadmap.title": "What's next",
       "roadmap.sub": 'Features under consideration. Priorities are guided by your requests (👍) — vote on each item with a GitHub account, or just leave a comment on the note.com <a href="https://note.com/just2enough/n/n0e7c73253b99" target="_blank" rel="noopener">article</a>.',
