@@ -24,7 +24,20 @@
     .legal h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--c-heading); letter-spacing: -0.02em; margin-bottom: 8px; }
     .legal .eff { color: var(--c-text-mute); font-size: 13.5px; margin-bottom: 22px; }
     .legal .lead { font-size: 1.05rem; color: var(--c-text-soft); margin-bottom: 8px; }
-    .legal h2 { font-size: 1.15rem; font-weight: 700; color: var(--c-heading); margin: 34px 0 10px; }
+    /* 節の切れ目を見せる: 見出しに縦のアクセント帯を付け、hr と併せて境界を明示する。
+       scroll-margin-top は sticky ヘッダ（64px）の下に見出しが隠れないようにするため。 */
+    .legal h2 {
+      font-size: 1.15rem; font-weight: 700; color: var(--c-heading);
+      margin: 40px 0 12px; padding-left: 12px; border-left: 4px solid var(--c-primary);
+      scroll-margin-top: 84px;
+    }
+    /* 目次 */
+    .toc { background: var(--c-bg-alt); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 16px 20px; margin: 24px 0 8px; }
+    .toc-title { font-size: 13px; font-weight: 700; color: var(--c-text-mute); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+    .toc ol { margin: 0 0 0 1.2em; }
+    .toc li { margin: 4px 0; font-size: 15px; }
+    .toc a { color: var(--c-primary-700); text-decoration: none; font-weight: 600; }
+    .toc a:hover { text-decoration: underline; }
     .legal h3 { font-size: 1rem; font-weight: 700; color: var(--c-heading); margin: 22px 0 8px; }
     .legal p { margin: 10px 0; }
     .legal ul, .legal ol { margin: 10px 0 10px 1.25em; }
@@ -70,7 +83,16 @@
           トップページの<a href="index.html#faq">よくある質問</a>より一歩踏み込んだ内容をまとめています。
         </p>
 
-        <h2>クラウド同期のフォルダに vault を置いている方へ</h2>
+        <nav class="toc" aria-label="目次">
+          <p class="toc-title">目次</p>
+          <ol>
+            <li><a href="#cloud">クラウド同期のフォルダに vault を置いている方へ</a></li>
+            <li><a href="#ignore">特定のフォルダを付箋の対象から外す（<code>.petatto-ignore</code>）</a></li>
+            <li><a href="#contact">それでも解決しないとき</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="cloud">クラウド同期のフォルダに vault を置いている方へ</h2>
         <p>
           Google ドライブ・OneDrive・Dropbox などの同期フォルダに Obsidian vault を置いて使うこともできます。
           このとき、同期の一時的な切断や再接続をはさむと、<strong>Obsidian 側で編集しても付箋に反映されなくなる</strong>ことがあります。
@@ -92,7 +114,7 @@
 
         <hr />
 
-        <h2>特定のフォルダを付箋の対象から外す（<code>.petatto-ignore</code>）</h2>
+        <h2 id="ignore">特定のフォルダを付箋の対象から外す（<code>.petatto-ignore</code>）</h2>
         <p>
           付箋にしたくないフォルダ（テンプレート置き場、下書き、アーカイブなど）には、
           <code>.petatto-ignore</code> という名前の<strong>空ファイル</strong>を 1 つ置きます。
@@ -104,28 +126,28 @@
           ドットで始まる名前のファイルは Obsidian からは作成・表示できないため、エクスプローラなど Windows 側で作成してください。
         </p>
         <ul>
-          <li>まずエクスプローラの「表示」で<strong>ファイル名拡張子を表示</strong>にしておきます（そうしないと <code>.petatto-ignore.txt</code> という別名になってしまい、効きません）。</li>
+          <li>まずエクスプローラの「表示」で<strong>ファイル名拡張子を表示</strong>にしておきます（そうしないと <code>.petatto-ignore.txt</code> という別名になってしまい、機能しません）。</li>
           <li>対象のフォルダで右クリック →「新規作成」→「テキスト ドキュメント」を作り、名前を <code>.petatto-ignore</code> に変更します。</li>
           <li>名前の変更がうまくいかない場合は、末尾にもう一つドットを付けて <code>.petatto-ignore.</code> と入力してください（末尾のドットは自動的に取り除かれます）。</li>
           <li>中身は空のままで構いません。書かれている内容は読み取りません。</li>
         </ul>
 
-        <h3>効きかたの細かいところ</h3>
+        <h3>もう少し細かいところ</h3>
         <ul>
           <li><strong>下の階層まで丸ごと外れます。</strong> 置いたフォルダだけでなく、その中のサブフォルダ、さらにその中……と、何段でも対象外になります。</li>
           <li><strong>vault のいちばん上に置くと、vault 全体が対象外になります。</strong> 付箋が 1 つも出てこなくなったときは、まずここを確認してください。</li>
           <li><strong>一部だけを対象に戻すことはできません。</strong> 外したフォルダの中に何を置いても、その中のノートを個別に呼び戻す方法はありません。戻したいときは、<code>.petatto-ignore</code> を削除して、本当に外したい下のフォルダに置き直してください。</li>
-          <li><strong>置く順番が大事です。</strong> 先に <code>.petatto-ignore</code> を置いてから、そのフォルダのノートに <code>petatto-md: true</code> を書いてください。逆の順番だと、書いた瞬間にいったん付箋になります（付箋ヘッダの「×」で解除すれば元に戻せます）。</li>
-          <li><strong>すでに出ている付箋はすぐには閉じません。</strong> 後から <code>.petatto-ignore</code> を置いた場合、その時点で開いている付箋はそのまま残り、<strong>次にアプリを起動したときに</strong>出てこなくなります。すぐ消したいときは付箋の「×」で解除してください。</li>
+          <li><strong>置く順番が大事です。</strong> 先に <code>.petatto-ignore</code> を置いてから、そのフォルダのノートに <code>petatto-md: true</code> を書いてください。逆の順番だと、書いた瞬間にいったん付箋になります。そのときはアプリを起動し直せば出てこなくなります（下記）。</li>
+          <li><strong>すでに出ている付箋はすぐには閉じません。</strong> 後から <code>.petatto-ignore</code> を置いた場合、その時点で開いている付箋はそのまま残り、<strong>次にアプリを起動したときに</strong>出てこなくなります。すぐ消したいときはアプリを起動し直してください。ノートの <code>petatto-md: true</code> はそのまま残るので、あとで <code>.petatto-ignore</code> を外せばまた付箋として出てきます。<br />（付箋ヘッダの「×」は<strong>使わないでください</strong>。「×」はノートの <code>petatto-md</code> 自体を書き換えて付箋化を解除する操作なので、フォルダを対象外にしたいだけの場合は目的が違ってしまいます。）</li>
           <li><strong>外したフォルダのファイルは「新規付箋化」からも選べません。</strong> トレイの「新規付箋化…」で選ぶと、対象外である旨のエラーになります。</li>
           <li><strong>外したフォルダの中は見ていません。</strong> 対象外にしたフォルダの中でノートを削除・移動しても、Petatto.md は何も通知しません（意図的な除外として扱います）。</li>
         </ul>
 
         <hr />
 
-        <h2>それでも解決しないとき</h2>
+        <h2 id="contact">それでも解決しないとき</h2>
         <p>
-          GitHub のイシューからお知らせください。お使いの Windows のバージョン、Petatto.md のバージョン、
+          GitHub のissueからお知らせください。お使いの Windows のバージョン、Petatto.md のバージョン、
           vault の置き場所（クラウド同期かどうか）を添えていただけると助かります。
         </p>
         <p>
@@ -142,7 +164,16 @@
           A deeper dive than the <a href="index.html#faq">FAQ</a> on the home page.
         </p>
 
-        <h2>If your vault lives in a cloud-synced folder</h2>
+        <nav class="toc" aria-label="Contents">
+          <p class="toc-title">Contents</p>
+          <ol>
+            <li><a href="#cloud-en">If your vault lives in a cloud-synced folder</a></li>
+            <li><a href="#ignore-en">Excluding a folder from sticky notes (<code>.petatto-ignore</code>)</a></li>
+            <li><a href="#contact-en">Still stuck?</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="cloud-en">If your vault lives in a cloud-synced folder</h2>
         <p>
           You can keep your Obsidian vault in a synced folder such as Google Drive, OneDrive, or Dropbox.
           When you do, a brief disconnection and reconnection of the sync client can leave
@@ -165,7 +196,7 @@
 
         <hr />
 
-        <h2>Excluding a folder from sticky notes (<code>.petatto-ignore</code>)</h2>
+        <h2 id="ignore-en">Excluding a folder from sticky notes (<code>.petatto-ignore</code>)</h2>
         <p>
           To keep a folder out of Petatto.md (templates, drafts, archives, and so on), place a single
           <strong>empty file</strong> named <code>.petatto-ignore</code> inside it.
@@ -188,15 +219,15 @@
           <li><strong>Everything below is excluded too.</strong> Not just the folder you put it in, but its subfolders, their subfolders, and so on, however deep.</li>
           <li><strong>Placed at the top of your vault, it excludes the whole vault.</strong> If no sticky notes appear at all, check this first.</li>
           <li><strong>You cannot bring part of it back.</strong> Nothing you place inside an excluded folder will re-include the notes within it. To bring them back, delete the <code>.petatto-ignore</code> file and place it in the deeper folder you actually meant to exclude.</li>
-          <li><strong>Order matters.</strong> Place <code>.petatto-ignore</code> first, then add <code>petatto-md: true</code> to notes in that folder. In the other order, a note becomes a sticky note the moment you write the flag (press "×" on the note to un-stick it).</li>
-          <li><strong>Sticky notes already on screen do not close right away.</strong> If you add <code>.petatto-ignore</code> later, notes that are currently open stay open and simply <strong>do not come back the next time you start the app</strong>. To remove one immediately, press "×" on the note.</li>
+          <li><strong>Order matters.</strong> Place <code>.petatto-ignore</code> first, then add <code>petatto-md: true</code> to notes in that folder. In the other order, a note becomes a sticky note the moment you write the flag; just restart the app and it will stay away (see below).</li>
+          <li><strong>Sticky notes already on screen do not close right away.</strong> If you add <code>.petatto-ignore</code> later, notes that are currently open stay open and simply <strong>do not come back the next time you start the app</strong>. To clear them immediately, restart the app. The <code>petatto-md: true</code> flag stays in your notes, so removing <code>.petatto-ignore</code> later brings the sticky notes back.<br />(Do <strong>not</strong> use the "×" button here. "×" rewrites the <code>petatto-md</code> flag in the note itself to un-stick it, which is not what you want when you only meant to exclude a folder.)</li>
           <li><strong>Excluded files cannot be picked in "New sticky note".</strong> Choosing one from the tray menu returns an error saying the folder is excluded.</li>
           <li><strong>Petatto.md stops looking inside.</strong> Deleting or moving notes within an excluded folder produces no notifications — the exclusion is treated as intentional.</li>
         </ul>
 
         <hr />
 
-        <h2>Still stuck?</h2>
+        <h2 id="contact-en">Still stuck?</h2>
         <p>
           Let us know on GitHub. It helps to include your Windows version, your Petatto.md version, and where your vault
           is stored (cloud-synced or not).
