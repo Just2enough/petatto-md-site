@@ -139,7 +139,7 @@
       "news.title": "お知らせ・記事",
       "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
       "news.5.src": "note",
-      "news.5.title": "思いついたら、その場でペタッと。Petatto.md v1.5.0：デスクトップから新しいnoteを作れるようになりました",
+      "news.5.title": "思いついたら、その場でペタッと。Petatto.md v1.5.0：デスクトップから新しいノートを作れるようになりました",
       "news.5.url": "https://note.com/just2enough/n/n93228cc3b8e6",
       "news.4.src": "note",
       "news.4.title": "ユーザーさまの声で進化！Petatto.md v1.4.0 ： 「このフォルダは付箋にしたくない」「付箋の履歴を残したい」に対応",
