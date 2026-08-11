@@ -139,7 +139,7 @@
           <li><strong>一部だけを対象に戻すことはできません。</strong> 外したフォルダの中に何を置いても、その中のノートを個別に呼び戻す方法はありません。戻したいときは、<code>.petatto-ignore</code> を削除して、本当に外したい下のフォルダに置き直してください。</li>
           <li><strong>置く順番が大事です。</strong> 先に <code>.petatto-ignore</code> を置いてから、そのフォルダのノートに <code>petatto-md: true</code> を書いてください。逆の順番だと、書いた瞬間にいったん付箋になります。そのときはアプリを起動し直せば出てこなくなります（下記）。</li>
           <li><strong>すでに出ている付箋はすぐには閉じません。</strong> 後から <code>.petatto-ignore</code> を置いた場合、その時点で開いている付箋はそのまま残り、<strong>次にアプリを起動したときに</strong>出てこなくなります。すぐ消したいときはアプリを起動し直してください。ノートの <code>petatto-md: true</code> はそのまま残るので、あとで <code>.petatto-ignore</code> を外せばまた付箋として出てきます。<br />（付箋ヘッダの「×」は<strong>使わないでください</strong>。「×」はノートの <code>petatto-md</code> 自体を書き換えて付箋化を解除する操作なので、フォルダを対象外にしたいだけの場合は目的が違ってしまいます。）</li>
-          <li><strong>外したフォルダのファイルは「新規付箋化」からも選べません。</strong> トレイの「新規付箋化…」で選ぶと、対象外である旨のエラーになります。</li>
+          <li><strong>外したフォルダのファイルは「新規付箋化」からも選べません。</strong> トレイの「新規付箋化…」で選ぶと、対象外である旨のエラーになります。「新規md作成…」の保存先にも選べません（監視の対象外である旨のエラーになります）。</li>
           <li><strong>外したフォルダの中は見ていません。</strong> 対象外にしたフォルダの中でノートを削除・移動しても、Petatto.md は何も通知しません（意図的な除外として扱います）。</li>
         </ul>
 
@@ -221,7 +221,7 @@
           <li><strong>You cannot bring part of it back.</strong> Nothing you place inside an excluded folder will re-include the notes within it. To bring them back, delete the <code>.petatto-ignore</code> file and place it in the deeper folder you actually meant to exclude.</li>
           <li><strong>Order matters.</strong> Place <code>.petatto-ignore</code> first, then add <code>petatto-md: true</code> to notes in that folder. In the other order, a note becomes a sticky note the moment you write the flag; just restart the app and it will stay away (see below).</li>
           <li><strong>Sticky notes already on screen do not close right away.</strong> If you add <code>.petatto-ignore</code> later, notes that are currently open stay open and simply <strong>do not come back the next time you start the app</strong>. To clear them immediately, restart the app. The <code>petatto-md: true</code> flag stays in your notes, so removing <code>.petatto-ignore</code> later brings the sticky notes back.<br />(Do <strong>not</strong> use the "×" button here. "×" rewrites the <code>petatto-md</code> flag in the note itself to un-stick it, which is not what you want when you only meant to exclude a folder.)</li>
-          <li><strong>Excluded files cannot be picked in "New sticky note".</strong> Choosing one from the tray menu returns an error saying the folder is excluded.</li>
+          <li><strong>Excluded files cannot be picked in "New sticky note".</strong> Choosing one from the tray menu returns an error saying the folder is excluded. Excluded folders can't be chosen as the save-to folder in "New md file…" either.</li>
           <li><strong>Petatto.md stops looking inside.</strong> Deleting or moving notes within an excluded folder produces no notifications — the exclusion is treated as intentional.</li>
         </ul>
 
