@@ -138,6 +138,9 @@
 
       "news.title": "お知らせ・記事",
       "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
+      "news.5.src": "note",
+      "news.5.title": "思いついたら、その場でペタッと。Petatto.md v1.5.0：デスクトップから新しいnoteを作れるようになりました",
+      "news.5.url": "https://note.com/just2enough/n/n93228cc3b8e6",
       "news.4.src": "note",
       "news.4.title": "ユーザーさまの声で進化！Petatto.md v1.4.0 ： 「このフォルダは付箋にしたくない」「付箋の履歴を残したい」に対応",
       "news.4.url": "https://note.com/just2enough/n/nd056fd600893",
@@ -288,6 +291,9 @@
 
       "news.title": "News & Articles",
       "news.sub": "Articles and updates about Petatto.md from the author.",
+      "news.5.src": "note",
+      "news.5.title": "Jot it down the moment it hits — Petatto.md v1.5.0: create new notes right from your desktop",
+      "news.5.url": "https://note.com/just2enough/n/n93228cc3b8e6?hl=en",
       "news.4.src": "note",
       "news.4.title": "Shaped by your feedback! Petatto.md v1.4.0 — answering “don’t pin this folder” and “keep a history of past sticky notes”",
       "news.4.url": "https://note.com/just2enough/n/nd056fd600893?hl=en",
