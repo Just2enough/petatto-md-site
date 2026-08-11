@@ -119,6 +119,11 @@
             <h3 data-i18n="feat.flag.t">frontmatter フラグだけ</h3>
             <p data-i18n="feat.flag.d"><code>petatto-md: true</code> を md に書くだけで付箋化。アプリ状態は md を汚しません。</p>
           </article>
+          <article class="card" style="--accent:#A78BFA">
+            <div class="card-ic">📝</div>
+            <h3 data-i18n="feat.newmd.t">新しいメモもトレイから</h3>
+            <p data-i18n="feat.newmd.d">トレイの「新規md作成…」でファイル名を入れるだけ。vault に <code>petatto-md: true</code> 付きの md が作られ、そのまま付箋になります。</p>
+          </article>
           <article class="card" style="--accent:#ECB6BD">
             <div class="card-ic">🎨</div>
             <h3 data-i18n="feat.palette.t">2 パレット × 4 色</h3>
@@ -208,7 +213,7 @@
           <li class="step">
             <div class="step-n">2</div>
             <h3 data-i18n="how.s2.t">付箋にする md を選ぶ</h3>
-            <p data-i18n="how.s2.d">トレイの「新規付箋化…」で md を選ぶか、frontmatter に <code>petatto-md: true</code> を書きます。</p>
+            <p data-i18n="how.s2.d">トレイの「新規付箋化…」で md を選ぶか「新規md作成…」で新しく作るか、frontmatter に <code>petatto-md: true</code> を書きます。</p>
           </li>
           <li class="step">
             <div class="step-n">3</div>
@@ -303,7 +308,7 @@ petatto-md: true
         <div class="faq">
           <details>
             <summary data-i18n="faq.q1">Obsidian は必須ですか？</summary>
-            <p data-i18n="faq.a1">必須ではありませんが、付箋化対象の md を作成・編集するのに想定しています。frontmatter に <code>petatto-md: true</code> を持つ md であれば、どのエディタで作っても構いません。</p>
+            <p data-i18n="faq.a1">必須ではありませんが、付箋化対象の md を作成・編集するのに想定しています。frontmatter に <code>petatto-md: true</code> を持つ md であれば、どのエディタで作っても構いません。v1.5.0 以降は、トレイの「新規md作成…」で Petatto.md からも新しい md を作成できます。</p>
           </details>
           <details>
             <summary data-i18n="faq.qlang">アプリの表示も英語に対応していますか？</summary>
@@ -351,14 +356,6 @@ petatto-md: true
               <span class="roadmap-desc" data-i18n="roadmap.aot.d">付箋ごとに「常に最前面」を保てるトグル。</span>
             </div>
             <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/4"
-              target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
-          </li>
-          <li class="roadmap-item">
-            <div class="roadmap-info">
-              <span class="roadmap-ttl" data-i18n="roadmap.newmd.t">新規 md をすぐ付箋化</span>
-              <span class="roadmap-desc" data-i18n="roadmap.newmd.d">トレイの右クリックから新しい md を作って、そのまま付箋に。</span>
-            </div>
-            <a class="roadmap-vote" href="https://github.com/Just2enough/petatto-md-releases/issues/2"
               target="_blank" rel="noopener" data-i18n="roadmap.vote">👍 で投票</a>
           </li>
           <li class="roadmap-item">
