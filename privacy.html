@@ -80,7 +80,7 @@
 
         <h2>3. ネットワーク通信</h2>
         <ul>
-          <li><strong>GitHub 配布版（MSI）</strong>: ヘッダの「最新版を確認」ボタンを押したときにのみ、新しいバージョンが存在するかを確認するためのバージョン情報（<code>latest.json</code>）を取得します。これは通常の Web リクエストであり、個人情報や利用状況は一切含みません。起動時の自動チェックは行いません。</li>
+          <li><strong>GitHub 配布版（MSI）</strong>: ヘッダの「最新版を確認」ボタンを押したとき、および設定「起動時に最新版を確認する」をオンにした場合の起動時 1 回にのみ、新しいバージョンが存在するかを確認するためのバージョン情報（<code>latest.json</code>）を取得します。この設定は既定でオフです（v1.6.0 以降）。これは通常の Web リクエストであり、個人情報や利用状況は一切含みません。</li>
           <li><strong>Microsoft Store 版（MSIX）</strong>: 更新は Microsoft Store が配信します。アプリ内の更新確認ボタンは無効化されています。</li>
           <li>上記以外に本アプリがネットワーク通信を行うことはありません。</li>
         </ul>
@@ -133,7 +133,7 @@
 
         <h2>3. Network communication</h2>
         <ul>
-          <li><strong>GitHub (MSI) version</strong>: Only when you press the "Check for updates" button does the App fetch a version manifest (<code>latest.json</code>) to see whether a newer version exists. This is an ordinary web request and contains no personal information or usage data. There is no automatic check on launch.</li>
+          <li><strong>GitHub (MSI) version</strong>: The App fetches a version manifest (<code>latest.json</code>) to see whether a newer version exists only when you press the "Check for updates" button, or once at startup if you turn on "Check for updates at startup" in settings. This setting is off by default (v1.6.0 and later). This is an ordinary web request and contains no personal information or usage data.</li>
           <li><strong>Microsoft Store (MSIX) version</strong>: Updates are delivered by the Microsoft Store; the in-app update-check button is disabled.</li>
           <li>The App makes no other network connections.</li>
         </ul>
