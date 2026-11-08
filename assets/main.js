@@ -137,6 +137,9 @@
 
       "news.title": "お知らせ・記事",
       "news.sub": "作者が書いた Petatto.md 関連の記事・更新情報。",
+      "news.6.src": "note",
+      "news.6.title": "夜のデスクトップにも、ぺたっと。Petatto.md v1.6.0：付箋のダークパレットと、起動時の更新確認（オプトイン）",
+      "news.6.url": "https://note.com/just2enough/n/n73b40a7f59ae",
       "news.5.src": "note",
       "news.5.title": "思いついたら、その場でペタッと。Petatto.md v1.5.0：デスクトップから新しいノートを直接作れるようになりました",
       "news.5.url": "https://note.com/just2enough/n/n93228cc3b8e6",
@@ -289,6 +292,9 @@
 
       "news.title": "News & Articles",
       "news.sub": "Articles and updates about Petatto.md from the author.",
+      "news.6.src": "note",
+      "news.6.title": "On your desktop, day or night — Petatto.md v1.6.0: a Dark palette for sticky notes and an opt-in update check at startup",
+      "news.6.url": "https://note.com/just2enough/n/n73b40a7f59ae?hl=en",
       "news.5.src": "note",
       "news.5.title": "Jot it down the moment it hits — Petatto.md v1.5.0: create new notes right from your desktop",
       "news.5.url": "https://note.com/just2enough/n/n93228cc3b8e6?hl=en",
